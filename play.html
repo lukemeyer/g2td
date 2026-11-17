@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G2TD Playtest</title>
+<style>
+  :root { --bg: #0e1012; --card: #181b1f; --line: #2a2f35; --text: #e6e8ea; --dim: #9aa1a8; --accent: #f2c94c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -apple-system, system-ui, sans-serif; }
+  header { position: sticky; top: 0; background: var(--bg); padding: 14px 16px 0; border-bottom: 1px solid var(--line); }
+  h1 { margin: 0 0 10px; font-size: 18px; }
+  nav { display: flex; gap: 4px; }
+  nav button { flex: 1; padding: 10px; border: 0; border-radius: 8px 8px 0 0; background: transparent; color: var(--dim); font: inherit; font-weight: 600; }
+  nav button.on { background: var(--card); color: var(--text); }
+  section { padding: 4px 16px 32px; }
+  h2 { margin: 22px 0 10px; font-size: 16px; color: var(--accent); }
+  h3 { margin: 0 0 4px; font-size: 16px; }
+  p { margin: 8px 0; }
+  .lead { color: var(--dim); }
+  .card { display: flex; gap: 14px; align-items: flex-start; background: var(--card); border-radius: 10px; padding: 12px; margin: 10px 0; }
+  .card img { width: 84px; height: 84px; object-fit: contain; image-rendering: pixelated; flex: none; background: #050607; border-radius: 6px; }
+  .card p { margin: 6px 0 0; color: var(--dim); font-size: 14px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 4px; }
+  .facts span { background: var(--line); border-radius: 4px; padding: 1px 6px; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  th, td { padding: 6px 4px; text-align: right; border-bottom: 1px solid var(--line); }
+  th:first-child, td:first-child { text-align: left; }
+  th { color: var(--dim); font-weight: 600; }
+  tfoot td { font-weight: 700; border-bottom: 0; }
+  .map { background: var(--card); border-radius: 10px; padding: 12px; margin: 10px 0; }
+  .map img { width: 100%; height: auto; border-radius: 6px; image-rendering: pixelated; display: block; margin-bottom: 8px; }
+  .map p { margin: 6px 0 0; color: var(--dim); font-size: 14px; }
+  canvas { width: 100%; height: auto; border-radius: 6px; image-rendering: pixelated; background: #000; }
+  #log { display: none; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<pre id="log"></pre>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

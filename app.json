@@ -1,0 +1,15 @@
+{
+  "package_id": "com.elsethenif.g2td",
+  "edition": "202601",
+  "name": "G2TD: Tower Defense",
+  "version": "1.0.0",
+  "min_sdk_version": "0.0.16",
+  "min_app_version": "2.2.10",
+  "description": "Tower defense on a two-lane road: lay laser and stasis triplines across it, and set sniper and cannon turrets at the corners.",
+  "developer_name": "Luke Meyer",
+  "entrypoint": "index.html",
+  "permissions": [],
+  "supported_languages": [
+    "en"
+  ]
+}

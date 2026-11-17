@@ -1,0 +1,16 @@
+The airlock has been breached! Fight off the bot invasion through 5 levels, then confront the boss at the airlock.
+
+DESIGNED FOR YOUR GLASSES
+- Full graphics with fast gameplay
+- Auto-save
+- Simple controls
+- Game guide on your phone with tower and enemy information
+
+CLASSIC TOWER DEFENSE
+- 4 tower types:
+  - Sniper: long range shots with high damage
+  - Cannon: splash damage for crowd control
+  - Laser tripline: hits (almost) everything that crosses its path
+  - Stasis tripline: slows enemies for a short time
+- Earn credits by defeating enemies; spend them on new towers before each wave
+- Multi-level campaign, plus an endless mode on random maps

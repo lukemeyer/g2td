@@ -1,0 +1,50 @@
+{
+  "_doc": "The campaign: five road maps then the boss, in order. anchors: top-left cell of each 2x2 turn square. slots (optional): v = tripline across a horizontal stretch at [row, col], h = across a vertical one, t = turret pad top-left [row, col] facing [dr, dc]; without them the rules place pads past every corner and a tripline on every other cell of each straight. hp multiplies every enemy's health and pace is how many steps of the difficulty curve each wave climbs (difficulty, tuned with tools/balance.ts). theme: what the art shows (its pieces, floors and walls come from the art pack, art/pack/pack.json; its layout from art/maps/<id>/layout.json). boss: the boss map's arms, tuned with tools/balance.ts. msgBox (optional): [row, first column] of the message box when not where rules.ts messageBox would put it. See CLAUDE.md, Map progression.",
+  "maps": [
+    {
+      "id": "cargo-bay", "name": "Cargo Bay", "waves": 5, "credits": 200, "hp": 0.7, "pace": 2,
+      "theme": "the base's cargo bay: freight containers, stacked crates, pallet racks, loading docks and a gantry crane over a wide plated floor",
+      "anchors": [[2, 0], [2, 9], [6, 9], [6, 14], [5, 14], [5, 19]]
+    },
+    {
+      "id": "hab-ring", "name": "Hab Ring", "waves": 5, "credits": 200, "hp": 1.0, "pace": 2,
+      "theme": "the habitation ring: crew quarters with bunks and lockers, a mess hall with tables, washrooms, a small gym, narrow side corridors and bulkhead doors",
+      "anchors": [[6, 0], [6, 5], [2, 5], [2, 12], [6, 12], [6, 19]],
+      "slots": [
+        ["v", 6, 1], ["v", 6, 3], ["t", 6, 7, 0, -1], ["t", 8, 5, -1, 0], ["h", 4, 5],
+        ["t", 2, 3, 0, 1], ["v", 2, 8], ["v", 2, 10], ["t", 2, 14, 0, -1],
+        ["h", 5, 12], ["t", 8, 12, -1, 0], ["t", 6, 10, 0, 1], ["v", 6, 15], ["v", 6, 17]
+      ]
+    },
+    {
+      "id": "regolith-mine", "name": "Regolith Mine", "waves": 5, "credits": 200, "hp": 0.9, "pace": 2,
+      "theme": "a mine dug into the moon's rock: rough cave walls, boulders and rubble, ore carts on rails, drilling rigs, support struts and conveyor belts",
+      "msgBox": [2, 0], "anchors": [[1, 0], [1, 15], [4, 15], [4, 2], [7, 2], [7, 13], [8, 13], [8, 19]]
+    },
+    {
+      "id": "reactor", "name": "Reactor", "waves": 5, "credits": 200, "hp": 1.05, "pace": 2,
+      "theme": "the reactor deck: round reactor vessels, coolant tanks, thick pipe runs and valves, turbines, cable trays and grated catwalks",
+      "anchors": [[1, 0], [1, 4], [7, 4], [7, 9], [1, 9], [1, 14], [5, 14], [5, 19]]
+    },
+    {
+      "id": "hydroponics", "name": "Hydroponics", "waves": 5, "credits": 200, "hp": 1.15, "pace": 2,
+      "theme": "the hydroponics farm: long rows of grow beds full of leafy plants, water tanks, irrigation pipes, grow-light panels and seed trays",
+      "anchors": [[1, 0], [1, 3], [7, 3], [7, 7], [1, 7], [1, 11], [7, 11], [7, 15], [2, 15], [2, 19]]
+    },
+    {
+      "id": "airlock", "name": "Airlock", "waves": 0, "credits": 140,
+      "theme": "the breached airlock where the robots got in: the outer door, suit racks, oxygen tanks and decontamination booths, with the Boss Bot on the left",
+      "msgBox": [2, 8], "anchors": [[2, 5], [2, 17], [6, 17], [6, 0]],
+      "slots": [["t", 2, 19, 0, -1, "boss"], ["t", 4, 7, 1, 0], ["t", 4, 15, 0, 1], ["t", 8, 17, -1, 0]],
+      "autoTrips": true,
+      "boss": {
+        "cells": [[1, 0], [5, 4]], "reward": 6, "bonus": 20, "turn": 60, "hits": 2,
+        "arms": [
+          {"kind": "walkers", "hp": 3, "count": 10, "more": 3, "bot": 40, "grow": 18},
+          {"kind": "floaters", "hp": 3, "count": 16, "more": 4, "bot": 20, "grow": 10},
+          {"kind": "swarm", "hp": 3, "count": 30, "more": 8, "bot": 16, "grow": 8}
+        ]
+      }
+    }
+  ]
+}

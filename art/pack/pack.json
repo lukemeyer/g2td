@@ -1,0 +1,2775 @@
+{
+ "_doc": "The art pack (docs/art.md): pieces, floor tiles, placed-wall and road-wall kits, and which each map uses. Pictures are relative to art/pack/, greyscale + alpha, grey = level x 17, at display size. tools/pack_build.py bundles it into src/pack.ts.",
+ "pieces": {
+  "ph-case": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "parts": {
+    "body": [
+     "placeholder/case-1.png",
+     "placeholder/case-2.png"
+    ]
+   }
+  },
+  "ph-couch": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "parts": {
+    "body": [
+     "placeholder/couch.png"
+    ]
+   }
+  },
+  "ph-locker": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "parts": {
+    "alone": [
+     "placeholder/locker-alone.png"
+    ],
+    "start": [
+     "placeholder/locker-start.png"
+    ],
+    "middle": [
+     "placeholder/locker-middle.png"
+    ],
+    "end": [
+     "placeholder/locker-end.png"
+    ],
+    "link5": [
+     "placeholder/locker-link5.png"
+    ],
+    "link7": [
+     "placeholder/locker-link7.png"
+    ]
+   }
+  },
+  "ph-mat": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "grid",
+   "decal": true,
+   "parts": {
+    "gss": [
+     "placeholder/mat-ss.png"
+    ],
+    "gst": [
+     "placeholder/mat-st.png"
+    ],
+    "gsm": [
+     "placeholder/mat-sm.png"
+    ],
+    "gsb": [
+     "placeholder/mat-sb.png"
+    ],
+    "gls": [
+     "placeholder/mat-ls.png"
+    ],
+    "glt": [
+     "placeholder/mat-lt.png"
+    ],
+    "glm": [
+     "placeholder/mat-lm.png"
+    ],
+    "glb": [
+     "placeholder/mat-lb.png"
+    ],
+    "gms": [
+     "placeholder/mat-ms.png"
+    ],
+    "gmt": [
+     "placeholder/mat-mt.png"
+    ],
+    "gmm": [
+     "placeholder/mat-mm.png"
+    ],
+    "gmb": [
+     "placeholder/mat-mb.png"
+    ],
+    "grs": [
+     "placeholder/mat-rs.png"
+    ],
+    "grt": [
+     "placeholder/mat-rt.png"
+    ],
+    "grm": [
+     "placeholder/mat-rm.png"
+    ],
+    "grb": [
+     "placeholder/mat-rb.png"
+    ],
+    "hl_s": [
+     "placeholder/mat-hl-s.png"
+    ],
+    "hl_t": [
+     "placeholder/mat-hl-t.png"
+    ],
+    "hl_m": [
+     "placeholder/mat-hl-m.png"
+    ],
+    "hl_b": [
+     "placeholder/mat-hl-b.png"
+    ],
+    "vl_s": [
+     "placeholder/mat-vl-s.png"
+    ],
+    "vl_l": [
+     "placeholder/mat-vl-l.png"
+    ],
+    "vl_m": [
+     "placeholder/mat-vl-m.png"
+    ],
+    "vl_r": [
+     "placeholder/mat-vl-r.png"
+    ],
+    "corner": [
+     "placeholder/mat-corner.png"
+    ]
+   }
+  },
+  "ph-pipe": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "path",
+   "parts": {
+    "dot": [
+     "placeholder/pipe-dot.png"
+    ],
+    "end": [
+     "placeholder/pipe-end.png"
+    ],
+    "straight": [
+     "placeholder/pipe-straight.png"
+    ],
+    "bend": [
+     "placeholder/pipe-bend.png"
+    ],
+    "tee": [
+     "placeholder/pipe-tee.png"
+    ],
+    "cross": [
+     "placeholder/pipe-cross.png"
+    ]
+   }
+  },
+  "barrel": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "A-s2"
+   ],
+   "parts": {
+    "body": [
+     "barrel/A-s2.png"
+    ]
+   }
+  },
+  "cargo-case": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "cargo-case/B-s2.png"
+    ]
+   }
+  },
+  "chair": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "chair/B-s2.png"
+    ]
+   }
+  },
+  "couch": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "A-s4"
+   ],
+   "parts": {
+    "body": [
+     "couch/A-s4.png"
+    ]
+   }
+  },
+  "locker": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s4",
+    "Bb8-s4",
+    "B-light-s3"
+   ],
+   "parts": {
+    "alone": [
+     "locker/B-s4-alone.png",
+     "locker/Bb8-s4-alone.png",
+     "locker/B-light-s3-alone.png"
+    ],
+    "start": [
+     "locker/B-s4-start.png",
+     "locker/Bb8-s4-start.png",
+     "locker/B-light-s3-start.png"
+    ],
+    "middle": [
+     "locker/B-s4-middle.png",
+     "locker/Bb8-s4-middle.png",
+     "locker/B-light-s3-middle.png"
+    ],
+    "end": [
+     "locker/B-s4-end.png",
+     "locker/Bb8-s4-end.png",
+     "locker/B-light-s3-end.png"
+    ],
+    "link5": [
+     "locker/B-s4-link5.png",
+     "locker/Bb8-s4-link5.png",
+     "locker/B-light-s3-link5.png"
+    ],
+    "link7": [
+     "locker/B-s4-link7.png",
+     "locker/Bb8-s4-link7.png",
+     "locker/B-light-s3-link7.png"
+    ]
+   }
+  },
+  "workstation": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "Bb8-s2"
+   ],
+   "parts": {
+    "body": [
+     "workstation/Bb8-s2.png"
+    ]
+   }
+  },
+  "bench": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "alone": [
+     "bench/B-s4-alone.png"
+    ],
+    "start": [
+     "bench/B-s4-start.png"
+    ],
+    "middle": [
+     "bench/B-s4-middle.png"
+    ],
+    "end": [
+     "bench/B-s4-end.png"
+    ],
+    "link5": [
+     "bench/B-s4-link5.png"
+    ],
+    "link7": [
+     "bench/B-s4-link7.png"
+    ]
+   }
+  },
+  "bin": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "bin/B-s3.png"
+    ]
+   }
+  },
+  "bunk": {
+   "size": [
+    1,
+    2
+   ],
+   "joins": "none",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "bunk/B-s4.png"
+    ]
+   }
+  },
+  "cabinet": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "alone": [
+     "cabinet/B-s4-alone.png"
+    ],
+    "start": [
+     "cabinet/B-s4-start.png"
+    ],
+    "middle": [
+     "cabinet/B-s4-middle.png"
+    ],
+    "end": [
+     "cabinet/B-s4-end.png"
+    ],
+    "link5": [
+     "cabinet/B-s4-link5.png"
+    ],
+    "link7": [
+     "cabinet/B-s4-link7.png"
+    ]
+   }
+  },
+  "console": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "alone": [
+     "console/B-s2-alone.png"
+    ],
+    "start": [
+     "console/B-s2-start.png"
+    ],
+    "middle": [
+     "console/B-s2-middle.png"
+    ],
+    "end": [
+     "console/B-s2-end.png"
+    ],
+    "link5": [
+     "console/B-s2-link5.png"
+    ],
+    "link7": [
+     "console/B-s2-link7.png"
+    ]
+   }
+  },
+  "desk": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "alone": [
+     "desk/B-s1-alone.png"
+    ],
+    "start": [
+     "desk/B-s1-start.png"
+    ],
+    "middle": [
+     "desk/B-s1-middle.png"
+    ],
+    "end": [
+     "desk/B-s1-end.png"
+    ],
+    "link5": [
+     "desk/B-s1-link5.png"
+    ],
+    "link7": [
+     "desk/B-s1-link7.png"
+    ]
+   }
+  },
+  "office-chair": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "office-chair/B-s2.png"
+    ]
+   }
+  },
+  "plant": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "plant/B-s2.png"
+    ]
+   }
+  },
+  "water-cooler": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "water-cooler/B-s1.png"
+    ]
+   }
+  },
+  "vending": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "alone": [
+     "vending/B-s4-alone.png"
+    ],
+    "start": [
+     "vending/B-s4-start.png"
+    ],
+    "middle": [
+     "vending/B-s4-middle.png"
+    ],
+    "end": [
+     "vending/B-s4-end.png"
+    ],
+    "link5": [
+     "vending/B-s4-link5.png"
+    ],
+    "link7": [
+     "vending/B-s4-link7.png"
+    ]
+   }
+  },
+  "table-6": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "table-6/B-s1.png"
+    ]
+   }
+  },
+  "table-4": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "table-4/B-s1.png"
+    ]
+   }
+  },
+  "stool": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "stool/B-s2.png"
+    ]
+   }
+  },
+  "side-table": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "side-table/B-s1.png"
+    ]
+   }
+  },
+  "shelf": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "alone": [
+     "shelf/B-s3-alone.png"
+    ],
+    "start": [
+     "shelf/B-s3-start.png"
+    ],
+    "middle": [
+     "shelf/B-s3-middle.png"
+    ],
+    "end": [
+     "shelf/B-s3-end.png"
+    ],
+    "link5": [
+     "shelf/B-s3-link5.png"
+    ],
+    "link7": [
+     "shelf/B-s3-link7.png"
+    ]
+   }
+  },
+  "case-stack": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "case-stack/B-s4.png"
+    ]
+   }
+  },
+  "gas-cylinder": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "gas-cylinder/B-s2.png"
+    ]
+   }
+  },
+  "tank": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "tank/B-s3.png"
+    ]
+   }
+  },
+  "tool-chest": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "alone": [
+     "tool-chest/B-s4-alone.png"
+    ],
+    "start": [
+     "tool-chest/B-s4-start.png"
+    ],
+    "middle": [
+     "tool-chest/B-s4-middle.png"
+    ],
+    "end": [
+     "tool-chest/B-s4-end.png"
+    ],
+    "link5": [
+     "tool-chest/B-s4-link5.png"
+    ],
+    "link7": [
+     "tool-chest/B-s4-link7.png"
+    ]
+   }
+  },
+  "cable-reel": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "cable-reel/B-s3.png"
+    ]
+   }
+  },
+  "generator": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "generator/B-s1.png"
+    ]
+   }
+  },
+  "work-light": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "work-light/B-s4.png"
+    ]
+   }
+  },
+  "fire-point": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "fire-point/B-s4.png"
+    ]
+   }
+  },
+  "bot-wreck": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "from": [
+    "B-s4",
+    "B-floater-s4",
+    "B-parts-s3"
+   ],
+   "parts": {
+    "body": [
+     "bot-wreck/B-s4.png",
+     "bot-wreck/B-floater-s4.png",
+     "bot-wreck/B-parts-s3.png"
+    ]
+   }
+  },
+  "pipe": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "path",
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "dot": [
+     "pipe/B-s3-dot.png"
+    ],
+    "end": [
+     "pipe/B-s3-end.png"
+    ],
+    "straight": [
+     "pipe/B-s3-straight.png"
+    ],
+    "bend": [
+     "pipe/B-s3-bend.png"
+    ],
+    "tee": [
+     "pipe/B-s3-tee.png"
+    ],
+    "cross": [
+     "pipe/B-s3-cross.png"
+    ]
+   }
+  },
+  "cable-tray": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "path",
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "dot": [
+     "cable-tray/B-s4-dot.png"
+    ],
+    "end": [
+     "cable-tray/B-s4-end.png"
+    ],
+    "straight": [
+     "cable-tray/B-s4-straight.png"
+    ],
+    "bend": [
+     "cable-tray/B-s4-bend.png"
+    ],
+    "tee": [
+     "cable-tray/B-s4-tee.png"
+    ],
+    "cross": [
+     "cable-tray/B-s4-cross.png"
+    ]
+   }
+  },
+  "conveyor": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "from": [
+    "B-s2",
+    "B-s4"
+   ],
+   "parts": {
+    "alone": [
+     "conveyor/B-s2-alone.png",
+     "conveyor/B-s4-alone.png"
+    ],
+    "start": [
+     "conveyor/B-s2-start.png",
+     "conveyor/B-s4-start.png"
+    ],
+    "middle": [
+     "conveyor/B-s2-middle.png",
+     "conveyor/B-s4-middle.png"
+    ],
+    "end": [
+     "conveyor/B-s2-end.png",
+     "conveyor/B-s4-end.png"
+    ],
+    "link5": [
+     "conveyor/B-s2-link5.png",
+     "conveyor/B-s4-link5.png"
+    ],
+    "link7": [
+     "conveyor/B-s2-link7.png",
+     "conveyor/B-s4-link7.png"
+    ]
+   }
+  },
+  "airlock-door": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "airlock-door/B-s4.png"
+    ]
+   }
+  },
+  "beacon": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "beacon/B-s4.png"
+    ]
+   }
+  },
+  "cargo-sled": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "cargo-sled/B-s4.png"
+    ]
+   }
+  },
+  "debris": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s2",
+    "B-struts-s3"
+   ],
+   "parts": {
+    "body": [
+     "debris/B-s2.png",
+     "debris/B-struts-s3.png"
+    ]
+   }
+  },
+  "decon-booth": {
+   "size": [
+    1,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "decon-booth/B-s3.png"
+    ]
+   }
+  },
+  "dust-drift": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "grid",
+   "decal": true,
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-b-s1"
+   ],
+   "parts": {
+    "gss": [
+     "dust-drift/B-b-s1-gss.png"
+    ],
+    "gst": [
+     "dust-drift/B-b-s1-gst.png"
+    ],
+    "gsm": [
+     "dust-drift/B-b-s1-gsm.png"
+    ],
+    "gsb": [
+     "dust-drift/B-b-s1-gsb.png"
+    ],
+    "gls": [
+     "dust-drift/B-b-s1-gls.png"
+    ],
+    "glt": [
+     "dust-drift/B-b-s1-glt.png"
+    ],
+    "glm": [
+     "dust-drift/B-b-s1-glm.png"
+    ],
+    "glb": [
+     "dust-drift/B-b-s1-glb.png"
+    ],
+    "gms": [
+     "dust-drift/B-b-s1-gms.png"
+    ],
+    "gmt": [
+     "dust-drift/B-b-s1-gmt.png"
+    ],
+    "gmm": [
+     "dust-drift/B-b-s1-gmm.png"
+    ],
+    "gmb": [
+     "dust-drift/B-b-s1-gmb.png"
+    ],
+    "grs": [
+     "dust-drift/B-b-s1-grs.png"
+    ],
+    "grt": [
+     "dust-drift/B-b-s1-grt.png"
+    ],
+    "grm": [
+     "dust-drift/B-b-s1-grm.png"
+    ],
+    "grb": [
+     "dust-drift/B-b-s1-grb.png"
+    ],
+    "hl_s": [
+     "dust-drift/B-b-s1-hl_s.png"
+    ],
+    "hl_t": [
+     "dust-drift/B-b-s1-hl_t.png"
+    ],
+    "hl_m": [
+     "dust-drift/B-b-s1-hl_m.png"
+    ],
+    "hl_b": [
+     "dust-drift/B-b-s1-hl_b.png"
+    ],
+    "vl_s": [
+     "dust-drift/B-b-s1-vl_s.png"
+    ],
+    "vl_l": [
+     "dust-drift/B-b-s1-vl_l.png"
+    ],
+    "vl_m": [
+     "dust-drift/B-b-s1-vl_m.png"
+    ],
+    "vl_r": [
+     "dust-drift/B-b-s1-vl_r.png"
+    ],
+    "corner": [
+     "dust-drift/B-b-s1-corner.png"
+    ]
+   }
+  },
+  "helmet-shelf": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "alone": [
+     "helmet-shelf/B-s1-alone.png"
+    ],
+    "start": [
+     "helmet-shelf/B-s1-start.png"
+    ],
+    "middle": [
+     "helmet-shelf/B-s1-middle.png"
+    ],
+    "end": [
+     "helmet-shelf/B-s1-end.png"
+    ],
+    "link5": [
+     "helmet-shelf/B-s1-link5.png"
+    ],
+    "link7": [
+     "helmet-shelf/B-s1-link7.png"
+    ]
+   }
+  },
+  "hose-reel": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "hose-reel/B-s1.png"
+    ]
+   }
+  },
+  "inner-door": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s4",
+    "B-forced-s2"
+   ],
+   "parts": {
+    "body": [
+     "inner-door/B-s4.png",
+     "inner-door/B-forced-s2.png"
+    ]
+   }
+  },
+  "pressure-console": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "alone": [
+     "pressure-console/B-s1-alone.png"
+    ],
+    "start": [
+     "pressure-console/B-s1-start.png"
+    ],
+    "middle": [
+     "pressure-console/B-s1-middle.png"
+    ],
+    "end": [
+     "pressure-console/B-s1-end.png"
+    ],
+    "link5": [
+     "pressure-console/B-s1-link5.png"
+    ],
+    "link7": [
+     "pressure-console/B-s1-link7.png"
+    ]
+   }
+  },
+  "suit-rack": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s3",
+    "B-empty-s4"
+   ],
+   "parts": {
+    "alone": [
+     "suit-rack/B-s3-alone.png",
+     "suit-rack/B-empty-s4-alone.png"
+    ],
+    "start": [
+     "suit-rack/B-s3-start.png",
+     "suit-rack/B-empty-s4-start.png"
+    ],
+    "middle": [
+     "suit-rack/B-s3-middle.png",
+     "suit-rack/B-empty-s4-middle.png"
+    ],
+    "end": [
+     "suit-rack/B-s3-end.png",
+     "suit-rack/B-empty-s4-end.png"
+    ],
+    "link5": [
+     "suit-rack/B-s3-link5.png",
+     "suit-rack/B-empty-s4-link5.png"
+    ],
+    "link7": [
+     "suit-rack/B-s3-link7.png",
+     "suit-rack/B-empty-s4-link7.png"
+    ]
+   }
+  },
+  "container": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "cargo-bay"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "container/B-s1.png"
+    ]
+   }
+  },
+  "container-stack": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "cargo-bay"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "container-stack/B-s1.png"
+    ]
+   }
+  },
+  "dock-edge": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "cargo-bay"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "alone": [
+     "dock-edge/B-s1-alone.png"
+    ],
+    "start": [
+     "dock-edge/B-s1-start.png"
+    ],
+    "middle": [
+     "dock-edge/B-s1-middle.png"
+    ],
+    "end": [
+     "dock-edge/B-s1-end.png"
+    ],
+    "link5": [
+     "dock-edge/B-s1-link5.png"
+    ],
+    "link7": [
+     "dock-edge/B-s1-link7.png"
+    ]
+   }
+  },
+  "pallet": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "cargo-bay"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "pallet/B-s2.png"
+    ]
+   }
+  },
+  "pallet-load": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "cargo-bay"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "pallet-load/B-s1.png"
+    ]
+   }
+  },
+  "pallet-rack": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "cargo-bay"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "alone": [
+     "pallet-rack/B-s2-alone.png"
+    ],
+    "start": [
+     "pallet-rack/B-s2-start.png"
+    ],
+    "middle": [
+     "pallet-rack/B-s2-middle.png"
+    ],
+    "end": [
+     "pallet-rack/B-s2-end.png"
+    ],
+    "link5": [
+     "pallet-rack/B-s2-link5.png"
+    ],
+    "link7": [
+     "pallet-rack/B-s2-link7.png"
+    ]
+   }
+  },
+  "basin": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "alone": [
+     "basin/B-s3-alone.png"
+    ],
+    "start": [
+     "basin/B-s3-start.png"
+    ],
+    "middle": [
+     "basin/B-s3-middle.png"
+    ],
+    "end": [
+     "basin/B-s3-end.png"
+    ],
+    "link5": [
+     "basin/B-s3-link5.png"
+    ],
+    "link7": [
+     "basin/B-s3-link7.png"
+    ]
+   }
+  },
+  "bedside": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "bedside/B-s1.png"
+    ]
+   }
+  },
+  "galley": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s3",
+    "B-sink-s2",
+    "B-hob-s4",
+    "B-fridge-s3"
+   ],
+   "parts": {
+    "alone": [
+     "galley/B-s3-alone.png",
+     "galley/B-sink-s2-alone.png",
+     "galley/B-hob-s4-alone.png",
+     "galley/B-fridge-s3-alone.png"
+    ],
+    "start": [
+     "galley/B-s3-start.png",
+     "galley/B-sink-s2-start.png",
+     "galley/B-hob-s4-start.png",
+     "galley/B-fridge-s3-start.png"
+    ],
+    "middle": [
+     "galley/B-s3-middle.png",
+     "galley/B-sink-s2-middle.png",
+     "galley/B-hob-s4-middle.png",
+     "galley/B-fridge-s3-middle.png"
+    ],
+    "end": [
+     "galley/B-s3-end.png",
+     "galley/B-sink-s2-end.png",
+     "galley/B-hob-s4-end.png",
+     "galley/B-fridge-s3-end.png"
+    ],
+    "link5": [
+     "galley/B-s3-link5.png",
+     "galley/B-sink-s2-link5.png",
+     "galley/B-hob-s4-link5.png",
+     "galley/B-fridge-s3-link5.png"
+    ],
+    "link7": [
+     "galley/B-s3-link7.png",
+     "galley/B-sink-s2-link7.png",
+     "galley/B-hob-s4-link7.png",
+     "galley/B-fridge-s3-link7.png"
+    ]
+   }
+  },
+  "shower": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "shower/B-s2.png"
+    ]
+   }
+  },
+  "toilet": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "toilet/B-s3.png"
+    ]
+   }
+  },
+  "weight-rack": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "alone": [
+     "weight-rack/B-s4-alone.png"
+    ],
+    "start": [
+     "weight-rack/B-s4-start.png"
+    ],
+    "middle": [
+     "weight-rack/B-s4-middle.png"
+    ],
+    "end": [
+     "weight-rack/B-s4-end.png"
+    ],
+    "link5": [
+     "weight-rack/B-s4-link5.png"
+    ],
+    "link7": [
+     "weight-rack/B-s4-link7.png"
+    ]
+   }
+  },
+  "boulder": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-pair-s2",
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "boulder/B-pair-s2.png",
+     "boulder/B-s2.png"
+    ]
+   }
+  },
+  "boulder-big": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "boulder-big/B-s2.png"
+    ]
+   }
+  },
+  "drill-rig": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "drill-rig/B-s1.png"
+    ]
+   }
+  },
+  "hopper": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "hopper/B-s3.png"
+    ]
+   }
+  },
+  "ore-cart": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "ore-cart/B-s2.png"
+    ]
+   }
+  },
+  "ore-vein": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "decal": true,
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "ore-vein/B-s2.png"
+    ]
+   }
+  },
+  "rail": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "path",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "dot": [
+     "rail/B-s4-dot.png"
+    ],
+    "end": [
+     "rail/B-s4-end.png"
+    ],
+    "straight": [
+     "rail/B-s4-straight.png"
+    ],
+    "bend": [
+     "rail/B-s4-bend.png"
+    ],
+    "tee": [
+     "rail/B-s4-tee.png"
+    ],
+    "cross": [
+     "rail/B-s4-cross.png"
+    ]
+   }
+  },
+  "rubble": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-b-s1"
+   ],
+   "parts": {
+    "body": [
+     "rubble/B-b-s1.png"
+    ]
+   }
+  },
+  "strut": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "regolith-mine"
+   ],
+   "from": [
+    "B-s1",
+    "B-pair-s2"
+   ],
+   "parts": {
+    "body": [
+     "strut/B-s1.png",
+     "strut/B-pair-s2.png"
+    ]
+   }
+  },
+  "catwalk": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "grid",
+   "decal": true,
+   "maps": [
+    "reactor"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "gss": [
+     "catwalk/B-s2-gss.png"
+    ],
+    "gst": [
+     "catwalk/B-s2-gst.png"
+    ],
+    "gsm": [
+     "catwalk/B-s2-gsm.png"
+    ],
+    "gsb": [
+     "catwalk/B-s2-gsb.png"
+    ],
+    "gls": [
+     "catwalk/B-s2-gls.png"
+    ],
+    "glt": [
+     "catwalk/B-s2-glt.png"
+    ],
+    "glm": [
+     "catwalk/B-s2-glm.png"
+    ],
+    "glb": [
+     "catwalk/B-s2-glb.png"
+    ],
+    "gms": [
+     "catwalk/B-s2-gms.png"
+    ],
+    "gmt": [
+     "catwalk/B-s2-gmt.png"
+    ],
+    "gmm": [
+     "catwalk/B-s2-gmm.png"
+    ],
+    "gmb": [
+     "catwalk/B-s2-gmb.png"
+    ],
+    "grs": [
+     "catwalk/B-s2-grs.png"
+    ],
+    "grt": [
+     "catwalk/B-s2-grt.png"
+    ],
+    "grm": [
+     "catwalk/B-s2-grm.png"
+    ],
+    "grb": [
+     "catwalk/B-s2-grb.png"
+    ],
+    "hl_s": [
+     "catwalk/B-s2-hl_s.png"
+    ],
+    "hl_t": [
+     "catwalk/B-s2-hl_t.png"
+    ],
+    "hl_m": [
+     "catwalk/B-s2-hl_m.png"
+    ],
+    "hl_b": [
+     "catwalk/B-s2-hl_b.png"
+    ],
+    "vl_s": [
+     "catwalk/B-s2-vl_s.png"
+    ],
+    "vl_l": [
+     "catwalk/B-s2-vl_l.png"
+    ],
+    "vl_m": [
+     "catwalk/B-s2-vl_m.png"
+    ],
+    "vl_r": [
+     "catwalk/B-s2-vl_r.png"
+    ],
+    "corner": [
+     "catwalk/B-s2-corner.png"
+    ]
+   }
+  },
+  "control-panel": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "reactor"
+   ],
+   "from": [
+    "B-s2",
+    "B-levers-s2"
+   ],
+   "parts": {
+    "alone": [
+     "control-panel/B-s2-alone.png",
+     "control-panel/B-levers-s2-alone.png"
+    ],
+    "start": [
+     "control-panel/B-s2-start.png",
+     "control-panel/B-levers-s2-start.png"
+    ],
+    "middle": [
+     "control-panel/B-s2-middle.png",
+     "control-panel/B-levers-s2-middle.png"
+    ],
+    "end": [
+     "control-panel/B-s2-end.png",
+     "control-panel/B-levers-s2-end.png"
+    ],
+    "link5": [
+     "control-panel/B-s2-link5.png",
+     "control-panel/B-levers-s2-link5.png"
+    ],
+    "link7": [
+     "control-panel/B-s2-link7.png",
+     "control-panel/B-levers-s2-link7.png"
+    ]
+   }
+  },
+  "heat-exchanger": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "reactor"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "heat-exchanger/B-s3.png"
+    ]
+   }
+  },
+  "pump": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "reactor"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "pump/B-s4.png"
+    ]
+   }
+  },
+  "reactor-vessel": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "reactor"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "reactor-vessel/B-s3.png"
+    ]
+   }
+  },
+  "turbine": {
+   "size": [
+    2,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "reactor"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "turbine/B-s4.png"
+    ]
+   }
+  },
+  "dwarf-tree": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "hydroponics"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "dwarf-tree/B-s1.png"
+    ]
+   }
+  },
+  "grow-bed": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "hydroponics"
+   ],
+   "from": [
+    "B-s2",
+    "B-s3",
+    "B-herbs-s1"
+   ],
+   "parts": {
+    "alone": [
+     "grow-bed/B-s2-alone.png",
+     "grow-bed/B-s3-alone.png",
+     "grow-bed/B-herbs-s1-alone.png"
+    ],
+    "start": [
+     "grow-bed/B-s2-start.png",
+     "grow-bed/B-s3-start.png",
+     "grow-bed/B-herbs-s1-start.png"
+    ],
+    "middle": [
+     "grow-bed/B-s2-middle.png",
+     "grow-bed/B-s3-middle.png",
+     "grow-bed/B-herbs-s1-middle.png"
+    ],
+    "end": [
+     "grow-bed/B-s2-end.png",
+     "grow-bed/B-s3-end.png",
+     "grow-bed/B-herbs-s1-end.png"
+    ],
+    "link5": [
+     "grow-bed/B-s2-link5.png",
+     "grow-bed/B-s3-link5.png",
+     "grow-bed/B-herbs-s1-link5.png"
+    ],
+    "link7": [
+     "grow-bed/B-s2-link7.png",
+     "grow-bed/B-s3-link7.png",
+     "grow-bed/B-herbs-s1-link7.png"
+    ]
+   }
+  },
+  "grow-light": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "hydroponics"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "alone": [
+     "grow-light/B-s2-alone.png"
+    ],
+    "start": [
+     "grow-light/B-s2-start.png"
+    ],
+    "middle": [
+     "grow-light/B-s2-middle.png"
+    ],
+    "end": [
+     "grow-light/B-s2-end.png"
+    ],
+    "link5": [
+     "grow-light/B-s2-link5.png"
+    ],
+    "link7": [
+     "grow-light/B-s2-link7.png"
+    ]
+   }
+  },
+  "nutrient-mixer": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "hydroponics"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "nutrient-mixer/B-s1.png"
+    ]
+   }
+  },
+  "planter": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "hydroponics"
+   ],
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "planter/B-s2.png"
+    ]
+   }
+  },
+  "seed-tray": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "hydroponics"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "alone": [
+     "seed-tray/B-s1-alone.png"
+    ],
+    "start": [
+     "seed-tray/B-s1-start.png"
+    ],
+    "middle": [
+     "seed-tray/B-s1-middle.png"
+    ],
+    "end": [
+     "seed-tray/B-s1-end.png"
+    ],
+    "link5": [
+     "seed-tray/B-s1-link5.png"
+    ],
+    "link7": [
+     "seed-tray/B-s1-link7.png"
+    ]
+   }
+  },
+  "o2-rack": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "row",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "alone": [
+     "o2-rack/B-s3-alone.png"
+    ],
+    "start": [
+     "o2-rack/B-s3-start.png"
+    ],
+    "middle": [
+     "o2-rack/B-s3-middle.png"
+    ],
+    "end": [
+     "o2-rack/B-s3-end.png"
+    ],
+    "link5": [
+     "o2-rack/B-s3-link5.png"
+    ],
+    "link7": [
+     "o2-rack/B-s3-link7.png"
+    ]
+   }
+  },
+  "valve": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "maps": [
+    "reactor"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "valve/B-s3.png"
+    ]
+   }
+  },
+  "bunk-double": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "bunk-double/B-s3.png"
+    ]
+   }
+  },
+  "treadmill": {
+   "size": [
+    1,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s3"
+   ],
+   "parts": {
+    "body": [
+     "treadmill/B-s3.png"
+    ]
+   }
+  },
+  "weight-bench": {
+   "size": [
+    1,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "hab-ring"
+   ],
+   "from": [
+    "B-s1"
+   ],
+   "parts": {
+    "body": [
+     "weight-bench/B-s1.png"
+    ]
+   }
+  },
+  "hatch": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "decal": true,
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "hatch/B-s4.png"
+    ]
+   }
+  },
+  "grate": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "grid",
+   "decal": true,
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "gss": [
+     "grate/B-s2-gss.png"
+    ],
+    "gst": [
+     "grate/B-s2-gst.png"
+    ],
+    "gsm": [
+     "grate/B-s2-gsm.png"
+    ],
+    "gsb": [
+     "grate/B-s2-gsb.png"
+    ],
+    "gls": [
+     "grate/B-s2-gls.png"
+    ],
+    "glt": [
+     "grate/B-s2-glt.png"
+    ],
+    "glm": [
+     "grate/B-s2-glm.png"
+    ],
+    "glb": [
+     "grate/B-s2-glb.png"
+    ],
+    "gms": [
+     "grate/B-s2-gms.png"
+    ],
+    "gmt": [
+     "grate/B-s2-gmt.png"
+    ],
+    "gmm": [
+     "grate/B-s2-gmm.png"
+    ],
+    "gmb": [
+     "grate/B-s2-gmb.png"
+    ],
+    "grs": [
+     "grate/B-s2-grs.png"
+    ],
+    "grt": [
+     "grate/B-s2-grt.png"
+    ],
+    "grm": [
+     "grate/B-s2-grm.png"
+    ],
+    "grb": [
+     "grate/B-s2-grb.png"
+    ],
+    "hl_s": [
+     "grate/B-s2-hl_s.png"
+    ],
+    "hl_t": [
+     "grate/B-s2-hl_t.png"
+    ],
+    "hl_m": [
+     "grate/B-s2-hl_m.png"
+    ],
+    "hl_b": [
+     "grate/B-s2-hl_b.png"
+    ],
+    "vl_s": [
+     "grate/B-s2-vl_s.png"
+    ],
+    "vl_l": [
+     "grate/B-s2-vl_l.png"
+    ],
+    "vl_m": [
+     "grate/B-s2-vl_m.png"
+    ],
+    "vl_r": [
+     "grate/B-s2-vl_r.png"
+    ],
+    "corner": [
+     "grate/B-s2-corner.png"
+    ]
+   }
+  },
+  "drain": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "decal": true,
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "drain/B-s2.png"
+    ]
+   }
+  },
+  "floor-arrow": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "decal": true,
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "floor-arrow/B-s2.png"
+    ]
+   }
+  },
+  "hazard": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "grid",
+   "decal": true,
+   "from": [
+    "B-s3",
+    "B-bold-s3"
+   ],
+   "parts": {
+    "gss": [
+     "hazard/B-s3-gss.png",
+     "hazard/B-bold-s3-gss.png"
+    ],
+    "gst": [
+     "hazard/B-s3-gst.png",
+     "hazard/B-bold-s3-gst.png"
+    ],
+    "gsm": [
+     "hazard/B-s3-gsm.png",
+     "hazard/B-bold-s3-gsm.png"
+    ],
+    "gsb": [
+     "hazard/B-s3-gsb.png",
+     "hazard/B-bold-s3-gsb.png"
+    ],
+    "gls": [
+     "hazard/B-s3-gls.png",
+     "hazard/B-bold-s3-gls.png"
+    ],
+    "glt": [
+     "hazard/B-s3-glt.png",
+     "hazard/B-bold-s3-glt.png"
+    ],
+    "glm": [
+     "hazard/B-s3-glm.png",
+     "hazard/B-bold-s3-glm.png"
+    ],
+    "glb": [
+     "hazard/B-s3-glb.png",
+     "hazard/B-bold-s3-glb.png"
+    ],
+    "gms": [
+     "hazard/B-s3-gms.png",
+     "hazard/B-bold-s3-gms.png"
+    ],
+    "gmt": [
+     "hazard/B-s3-gmt.png",
+     "hazard/B-bold-s3-gmt.png"
+    ],
+    "gmm": [
+     "hazard/B-s3-gmm.png",
+     "hazard/B-bold-s3-gmm.png"
+    ],
+    "gmb": [
+     "hazard/B-s3-gmb.png",
+     "hazard/B-bold-s3-gmb.png"
+    ],
+    "grs": [
+     "hazard/B-s3-grs.png",
+     "hazard/B-bold-s3-grs.png"
+    ],
+    "grt": [
+     "hazard/B-s3-grt.png",
+     "hazard/B-bold-s3-grt.png"
+    ],
+    "grm": [
+     "hazard/B-s3-grm.png",
+     "hazard/B-bold-s3-grm.png"
+    ],
+    "grb": [
+     "hazard/B-s3-grb.png",
+     "hazard/B-bold-s3-grb.png"
+    ],
+    "hl_s": [
+     "hazard/B-s3-hl_s.png",
+     "hazard/B-bold-s3-hl_s.png"
+    ],
+    "hl_t": [
+     "hazard/B-s3-hl_t.png",
+     "hazard/B-bold-s3-hl_t.png"
+    ],
+    "hl_m": [
+     "hazard/B-s3-hl_m.png",
+     "hazard/B-bold-s3-hl_m.png"
+    ],
+    "hl_b": [
+     "hazard/B-s3-hl_b.png",
+     "hazard/B-bold-s3-hl_b.png"
+    ],
+    "vl_s": [
+     "hazard/B-s3-vl_s.png",
+     "hazard/B-bold-s3-vl_s.png"
+    ],
+    "vl_l": [
+     "hazard/B-s3-vl_l.png",
+     "hazard/B-bold-s3-vl_l.png"
+    ],
+    "vl_m": [
+     "hazard/B-s3-vl_m.png",
+     "hazard/B-bold-s3-vl_m.png"
+    ],
+    "vl_r": [
+     "hazard/B-s3-vl_r.png",
+     "hazard/B-bold-s3-vl_r.png"
+    ],
+    "corner": [
+     "hazard/B-s3-corner.png",
+     "hazard/B-bold-s3-corner.png"
+    ]
+   }
+  },
+  "scorch": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "none",
+   "decal": true,
+   "from": [
+    "B-s2"
+   ],
+   "parts": {
+    "body": [
+     "scorch/B-s2.png"
+    ]
+   }
+  },
+  "mat": {
+   "size": [
+    1,
+    1
+   ],
+   "joins": "grid",
+   "decal": true,
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "gss": [
+     "mat/B-s4-gss.png"
+    ],
+    "gst": [
+     "mat/B-s4-gst.png"
+    ],
+    "gsm": [
+     "mat/B-s4-gsm.png"
+    ],
+    "gsb": [
+     "mat/B-s4-gsb.png"
+    ],
+    "gls": [
+     "mat/B-s4-gls.png"
+    ],
+    "glt": [
+     "mat/B-s4-glt.png"
+    ],
+    "glm": [
+     "mat/B-s4-glm.png"
+    ],
+    "glb": [
+     "mat/B-s4-glb.png"
+    ],
+    "gms": [
+     "mat/B-s4-gms.png"
+    ],
+    "gmt": [
+     "mat/B-s4-gmt.png"
+    ],
+    "gmm": [
+     "mat/B-s4-gmm.png"
+    ],
+    "gmb": [
+     "mat/B-s4-gmb.png"
+    ],
+    "grs": [
+     "mat/B-s4-grs.png"
+    ],
+    "grt": [
+     "mat/B-s4-grt.png"
+    ],
+    "grm": [
+     "mat/B-s4-grm.png"
+    ],
+    "grb": [
+     "mat/B-s4-grb.png"
+    ],
+    "hl_s": [
+     "mat/B-s4-hl_s.png"
+    ],
+    "hl_t": [
+     "mat/B-s4-hl_t.png"
+    ],
+    "hl_m": [
+     "mat/B-s4-hl_m.png"
+    ],
+    "hl_b": [
+     "mat/B-s4-hl_b.png"
+    ],
+    "vl_s": [
+     "mat/B-s4-vl_s.png"
+    ],
+    "vl_l": [
+     "mat/B-s4-vl_l.png"
+    ],
+    "vl_m": [
+     "mat/B-s4-vl_m.png"
+    ],
+    "vl_r": [
+     "mat/B-s4-vl_r.png"
+    ],
+    "corner": [
+     "mat/B-s4-corner.png"
+    ]
+   }
+  },
+  "rover": {
+   "size": [
+    2,
+    2
+   ],
+   "joins": "none",
+   "maps": [
+    "airlock"
+   ],
+   "from": [
+    "B-s4"
+   ],
+   "parts": {
+    "body": [
+     "rover/B-s4.png"
+    ]
+   }
+  }
+ },
+ "floors": {
+  "ph-plate": {
+   "tile": [
+    "placeholder/floor-plate-1.png",
+    "placeholder/floor-plate-2.png"
+   ]
+  },
+  "ph-walk": {
+   "tile": [
+    "placeholder/floor-walk.png"
+   ]
+  },
+  "al-plate": {
+   "from": "s1",
+   "tile": [
+    "al-plate/s1-tile0.png",
+    "al-plate/s1-tile1.png",
+    "al-plate/s1-tile2.png",
+    "al-plate/s1-tile3.png"
+   ]
+  },
+  "cb-plate": {
+   "from": "s2",
+   "tile": [
+    "cb-plate/s2-tile0.png",
+    "cb-plate/s2-tile1.png",
+    "cb-plate/s2-tile2.png",
+    "cb-plate/s2-tile3.png"
+   ],
+   "panel": [
+    2,
+    2
+   ]
+  },
+  "hr-deck": {
+   "from": "s1",
+   "tile": [
+    "hr-deck/s1-tile0.png",
+    "hr-deck/s1-tile1.png",
+    "hr-deck/s1-tile2.png",
+    "hr-deck/s1-tile3.png"
+   ]
+  },
+  "rm-rock": {
+   "from": "s3",
+   "tile": [
+    "rm-rock/s3-tile0.png",
+    "rm-rock/s3-tile1.png",
+    "rm-rock/s3-tile2.png",
+    "rm-rock/s3-tile3.png"
+   ]
+  },
+  "hy-tile": {
+   "from": "s3",
+   "tile": [
+    "hy-tile/s3-tile0.png",
+    "hy-tile/s3-tile1.png",
+    "hy-tile/s3-tile2.png",
+    "hy-tile/s3-tile3.png"
+   ]
+  },
+  "re-grate": {
+   "from": "s3",
+   "tile": [
+    "re-grate/s3-tile0.png",
+    "re-grate/s3-tile1.png"
+   ],
+   "panel": [
+    2,
+    1
+   ]
+  },
+  "hy-plate": {
+   "from": "tools/floor_plain.py",
+   "tile": [
+    "hy-plate/tile0.png",
+    "hy-plate/tile1.png",
+    "hy-plate/tile2.png",
+    "hy-plate/tile3.png"
+   ],
+   "panel": [
+    2,
+    2
+   ]
+  }
+ },
+ "walls": {
+  "ph-panel": {
+   "h": "placeholder/wall-h.png",
+   "v": "placeholder/wall-v.png",
+   "node": "placeholder/wall-node.png"
+  },
+  "al-cable": {
+   "from": "s2",
+   "h": "al-cable/s2-h.png",
+   "v": "al-cable/s2-v.png",
+   "node": "al-cable/s2-node.png"
+  },
+  "cb-fence": {
+   "from": "s1",
+   "h": "cb-fence/s1-h.png",
+   "v": "cb-fence/s1-v.png",
+   "node": "cb-fence/s1-node.png"
+  },
+  "hr-panel": {
+   "from": "s4",
+   "h": "hr-panel/s4-h.png",
+   "v": "hr-panel/s4-v.png",
+   "node": "hr-panel/s4-node.png"
+  },
+  "rm-cage": {
+   "from": "s3",
+   "h": "rm-cage/s3-h.png",
+   "v": "rm-cage/s3-v.png",
+   "node": "rm-cage/s3-node.png"
+  },
+  "re-rail": {
+   "from": "s4",
+   "h": "re-rail/s4-h.png",
+   "v": "re-rail/s4-v.png",
+   "node": "re-rail/s4-node.png"
+  },
+  "hy-trellis": {
+   "from": "s4",
+   "h": "hy-trellis/s4-h.png",
+   "v": "hy-trellis/s4-v.png",
+   "node": "hy-trellis/s4-node.png"
+  }
+ },
+ "roads": {
+  "ph-barrier": {
+   "width": 7,
+   "strip": "placeholder/road-strip.png",
+   "corner": "placeholder/road-corner.png"
+  },
+  "al-blast": {
+   "from": "s4",
+   "width": 7,
+   "strip": "al-blast/s4-strip.png",
+   "corner": "al-blast/s4-corner.png"
+  },
+  "cb-barrier": {
+   "from": "s4",
+   "width": 7,
+   "strip": "cb-barrier/s4-strip.png",
+   "corner": "cb-barrier/s4-corner.png"
+  },
+  "hr-bulkhead": {
+   "from": "s1",
+   "width": 7,
+   "strip": "hr-bulkhead/s1-strip.png",
+   "corner": "hr-bulkhead/s1-corner.png"
+  },
+  "rm-face": {
+   "from": "s2",
+   "width": 7,
+   "strip": "rm-face/s2-strip.png",
+   "corner": "rm-face/s2-corner.png"
+  },
+  "re-pipes": {
+   "from": "s4",
+   "width": 7,
+   "strip": "re-pipes/s4-strip.png",
+   "corner": "re-pipes/s4-corner.png"
+  },
+  "hy-glass": {
+   "from": "s1",
+   "width": 7,
+   "strip": "hy-glass/s1-strip.png",
+   "corner": "hy-glass/s1-corner.png"
+  }
+ },
+ "maps": {
+  "cargo-bay": {
+   "floor": "cb-plate",
+   "floors": [
+    "cb-plate",
+    "ph-plate",
+    "ph-walk"
+   ],
+   "walls": "cb-fence",
+   "road": "cb-barrier",
+   "pieces": [
+    "*"
+   ]
+  },
+  "hab-ring": {
+   "floor": "hr-deck",
+   "floors": [
+    "hr-deck",
+    "ph-plate",
+    "ph-walk"
+   ],
+   "walls": "hr-panel",
+   "road": "hr-bulkhead",
+   "pieces": [
+    "*"
+   ]
+  },
+  "regolith-mine": {
+   "floor": "rm-rock",
+   "floors": [
+    "rm-rock",
+    "ph-plate",
+    "ph-walk"
+   ],
+   "walls": "rm-cage",
+   "road": "rm-face",
+   "pieces": [
+    "*"
+   ]
+  },
+  "reactor": {
+   "floor": "re-grate",
+   "floors": [
+    "re-grate",
+    "ph-plate",
+    "ph-walk"
+   ],
+   "walls": "re-rail",
+   "road": "re-pipes",
+   "pieces": [
+    "*"
+   ]
+  },
+  "hydroponics": {
+   "floor": "hy-plate",
+   "floors": [
+    "hy-plate",
+    "hy-tile",
+    "ph-plate",
+    "ph-walk"
+   ],
+   "walls": "hy-trellis",
+   "road": "hy-glass",
+   "pieces": [
+    "*"
+   ]
+  },
+  "airlock": {
+   "floor": "al-plate",
+   "floors": [
+    "al-plate",
+    "ph-plate",
+    "ph-walk"
+   ],
+   "walls": "al-cable",
+   "road": "al-blast",
+   "pieces": [
+    "*"
+   ]
+  }
+ }
+}

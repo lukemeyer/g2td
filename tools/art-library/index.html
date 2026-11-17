@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art Library</title>
+<!-- The art library (dev only, never built): every picture in the art pack (art/pack/,
+     bundled as src/pack.ts by tools/pack_build.py), drawn by the game's own renderer on its
+     map's floor: each piece turned four ways, joining pieces in rows and grids with a seam
+     score, floors, wall and road kits. Review any picture: ★ favorite, or redo with reasons
+     (art/reviews.json); hide candidates you're done with. The shared set has its own pages
+     (furniture, industrial, decals), each map a page of its own things. Every object is a
+     card that opens and closes (kept per browser); picking a candidate updates the pack in
+     place, without reloading the page. npm run dev, then http://localhost:5173/tools/art-library/ -->
+<style>
+  :root { --bg: #16181b; --panel: #202328; --line: #33373e; --text: #e4e6ea; --dim: #8b919b; --accent: #5ad17a; --warn: #f2c94c; --bad: #ff7a6b; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 13px/1.4 -apple-system, system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+  header h1 { font-size: 15px; margin: 0 6px 0 0; }
+  header label { color: var(--dim); display: flex; gap: 5px; align-items: center; }
+  select, input[type=search], button { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; font: inherit; }
+  input[type=range] { width: 90px; }
+  button { cursor: pointer; }
+  #status { color: var(--dim); flex: 1 1 200px; text-align: right; }
+  main { padding: 10px 12px 40px; }
+  h2 { font-size: 14px; margin: 18px 0 8px; color: var(--accent); }
+  .item { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin: 0 0 10px; padding: 8px 10px; }
+  .item > .head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; cursor: pointer; user-select: none; }
+  .item.open > .head { margin-bottom: 6px; }
+  .item > .head .tw { color: var(--dim); width: 10px; }
+  .item:not(.open) > .head span:last-child { flex: 1 1 0; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .badge { font-size: 11px; font-weight: 600; padding: 0 6px; border-radius: 9px; white-space: nowrap; }
+  .item > .head .badge.picked { color: #0b1a10; background: var(--accent); }
+  .item > .head .badge.none { color: var(--warn); border: 1px solid var(--warn); }
+  .item h3 { font-size: 12px; color: var(--dim); font-weight: 600; margin: 8px 0 4px; }
+  .v.hidden { opacity: 0.45; }
+  .v .hide { margin-left: 6px; }
+  .item > .head b { font-size: 14px; }
+  .item > .head span { color: var(--dim); }
+  .demo { overflow-x: auto; margin-bottom: 8px; }
+  .row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; flex-wrap: wrap; }
+  .v { flex: none; border: 1px solid var(--line); border-radius: 6px; padding: 6px; }
+  .v .label { font-weight: 600; margin-bottom: 4px; font-size: 11px; }
+  canvas { image-rendering: pixelated; display: block; border-radius: 2px; }
+  .nums { color: var(--dim); font-size: 11px; margin-top: 4px; }
+  .note { color: var(--dim); max-width: 900px; }
+  .review { display: flex; gap: 6px; align-items: center; margin-top: 6px; flex-wrap: wrap; }
+  .review button { padding: 3px 8px; font-size: 11px; }
+  button.star { color: var(--dim); }
+  button.star.on { color: #111; background: var(--warn); border-color: var(--warn); }
+  button.redo.on { color: #111; background: var(--bad); border-color: var(--bad); }
+  .v.fav { box-shadow: 0 0 0 2px var(--warn) inset; }
+  .v.redoing { box-shadow: 0 0 0 2px var(--bad) inset; }
+  .said { font-size: 11px; color: var(--bad); margin-top: 4px; max-width: 260px; white-space: pre-wrap; }
+  .redo-form { margin-top: 6px; padding: 6px; border: 1px solid var(--bad); border-radius: 6px; display: flex; flex-direction: column; gap: 4px; max-width: 260px; }
+  .redo-form label { color: var(--text); display: flex; gap: 6px; align-items: center; }
+  .redo-form textarea { background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 4px; font: inherit; min-height: 54px; resize: vertical; }
+  .redo-form .buttons { display: flex; gap: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Art Library</h1>
+  <select id="map" title="Show the pieces this map uses, on its floor"></select>
+  <input id="find" type="search" placeholder="find…">
+  <button id="collapse" title="Close every card">collapse all</button>
+  <button id="expand" title="Open every card (slow on a big page)">expand all</button>
+  <select id="picks" title="Show only objects with or without a candidate in the pack"><option value="all">all objects</option><option value="none">no pick yet</option><option value="picked">picked</option></select>
+  <label title="Show the candidates you've hidden, to unhide them"><input id="hidden" type="checkbox"> hidden</label>
+  <select id="reviewed" title="Show only pictures you've reviewed"><option value="all">all reviews</option><option value="fav">★ favorites</option><option value="redo">redo</option><option value="none">not reviewed</option></select>
+  <label>zoom <select id="zoom"><option>2</option><option selected>3</option><option>5</option><option>8</option></select></label>
+  <label title="Draw as the glasses show it (test card: black up to level 0, big steps to 6, small after) or as plain levels"><input id="glasses" type="checkbox" checked> glasses</label>
+  <span style="color:var(--dim)" title="Text colours against image levels on the glasses (test card page 2)">text 0 = 3 · 1 = 6 · 2 = 9 · 3 = 12 · 4 = 15</span>
+  <span id="status"></span>
+</header>
+<main id="main"></main>
+<script type="module" src="./library.js"></script>
+</body>
+</html>

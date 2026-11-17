@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.ehpk
+__pycache__/
+.DS_Store
+.venv/
+art/library/
+dist-play/
+art/work/
+art/reviews.json
